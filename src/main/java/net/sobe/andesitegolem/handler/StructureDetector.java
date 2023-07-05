@@ -60,6 +60,8 @@ public class StructureDetector {
                     Criteria.SUMMONED_ENTITY.trigger(serverPlayerEntity2, andesiteGolemEntity);
                 }
 
+                andesiteGolemEntity.setPlayerCreated();
+
                 for(var l = 0; l < pattern.getWidth(); ++l){
                     for(int m = 0; m < pattern.getHeight(); ++m){
                         CachedBlockPosition cachedBlockPosition4 = result.translate(l, m, 0);
