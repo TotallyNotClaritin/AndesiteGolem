@@ -51,11 +51,9 @@ public class AndesiteGolemEntity extends GolemEntity implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
-        else if(event.getController().getAnimationState().equals(AnimationState.Stopped)) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.andesitegolem.idle", true));
-            return PlayState.CONTINUE;
-        }
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.andesitegolem.idle", true));
         return PlayState.CONTINUE;
+
     }
 
     private PlayState attackPredicate(AnimationEvent event)
@@ -72,7 +70,7 @@ public class AndesiteGolemEntity extends GolemEntity implements IAnimatable {
     @Override
     public void registerControllers(AnimationData animationData)
     {
-        animationData.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+        animationData.addAnimationController(new AnimationController(this, "controller", 2, this::predicate));
         animationData.addAnimationController(new AnimationController(this, "attackController", 0, this::attackPredicate));
     }
 

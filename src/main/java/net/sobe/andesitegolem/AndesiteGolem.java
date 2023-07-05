@@ -1,6 +1,7 @@
 package net.sobe.andesitegolem;
 
 import net.fabricmc.api.ModInitializer;
+import net.sobe.andesitegolem.item.ModItems;
 import net.sobe.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ public class AndesiteGolem implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModRegistries.registerMods();
+		ModItems.registerModItems();
 		GeckoLib.initialize();
 		LOGGER.info("It's the boy, the andesite boy!");
 	}
